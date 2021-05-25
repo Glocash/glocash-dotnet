@@ -5,9 +5,9 @@
 <%
 /**
  * 直连模式
- * 技术联系人 chenrj 17602115638 微信同号
- * 文档地址 https://portal.glocash.com/merchant/index/document
- * 商户后台 https://portal.glocash.com/merchant/index/login
+ * 技术联系人 陈荣江 17602115638 微信同号
+ * 文档地址 https://docs.glocash.com/
+ * 商户后台 https://portal.glocashpayment.com/#/login
  *
  */
 
@@ -27,8 +27,8 @@
 
  //TODO 请仔细查看TODO的注释 请仔细查看TODO的注释 请仔细查看TODO的注释
 
-String sandbox_url="https://sandbox.glocash.com/gateway/payment/ccDirect"; //测试地址
-String live_url = "http://pay.v2gc.test/gateway/payment/ccDirect"; //正式地址
+String sandbox_url="https://sandbox.glocashpayment.com/gateway/payment/ccDirect"; //测试地址
+String live_url = "https://pay.glocashpayment.com/gateway/payment/ccDirect"; //正式地址
 
 //秘钥 测试地址请用测试秘钥 正式地址用正式秘钥 请登录商户后台查看
 String sandbox_key = "85f89b981e120f601f6f9fcd65*********8a0b2eee937f48ad3e9b57bf67d9e"; //TODO 测试秘钥 商户后台查看

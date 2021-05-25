@@ -3,12 +3,11 @@
 <!DOCTYPE html>
 
 <%
-    
 /**
  * 经典模式
  * 技术联系人 陈荣江 17602115638 微信同号
- * 文档地址 https://portal.glocash.com/merchant/index/document
- * 商户后台 https://portal.glocash.com/merchant/index/login
+ * 文档地址 https://docs.glocash.com/
+ * 商户后台 https://portal.glocashpayment.com/#/login
  *
  */
 
@@ -28,12 +27,12 @@
 
 //TODO 请仔细查看TODO的注释 请仔细查看TODO的注释 请仔细查看TODO的注释  
 
-String sandbox_url= "https://sandbox.glocash.com/gateway/payment/index"; //测试地址
-String live_url = "https://pay.glocash.com/gateway/payment/index"; //正式地址
+String sandbox_url= "https://sandbox.glocashpayment.com/gateway/payment/index"; //测试地址
+String live_url = "https://pay.glocashpayment.com/gateway/payment/index"; //正式地址
 
 //秘钥 测试地址请用测试秘钥 正式地址用正式秘钥 请登录商户后台查看
-String sandbox_key = ""; //TODO 测试秘钥 商户后台查看
-String live_key = ""; //TODO 正式秘钥 商户后台查看(必须材料通过以后才能使用)
+String sandbox_key = "85f89b981e120f601f6f9fcd65*********8a0b2eee937f48ad3e9b57bf67d9e"; //TODO 测试秘钥 商户后台查看
+String live_key = "776cecacb325b2e8e9d5e2dea122*********e6cd22d40e25935e64cb8a90da7"; //TODO 正式秘钥 商户后台查看(必须材料通过以后才能使用)
 
 //当前时间戳
 DateTime utctemp = DateTime.UtcNow;
