@@ -49,27 +49,28 @@ String invoicetemp = utctemp.Year + (utctemp.Month < 10 ? "0" + utctemp.Month.To
 
 //支付参数
 var data = new NameValueCollection();
-data["REQ_SANDBOX"]  = "0"; //TODO 是否开启测试模式 注意秘钥是否对应
+data["REQ_SANDBOX"]  = "1"; //TODO 是否开启测试模式 注意秘钥是否对应
 data["REQ_EMAIL"] = "rongjiang.chen@witsion.com"; //TODO 需要换成自己的 商户邮箱 商户后台申请的邮箱
 data["REQ_TIMES"]    = untime; //请求时间
 data["REQ_INVOICE"] = "TEST" + invoicetemp + rand.Next(1000, 9999); //订单号
 data["BIL_METHOD"]   = "C01"; //请求方式
 data["CUS_EMAIL"] = "rongjiang.chen@witsion.com"; //客户邮箱
-data["BIL_PRICE"]    = "0.1"; //价格
+data["BIL_PRICE"]    = "1"; //价格
 data["BIL_CURRENCY"] = "USD"; //币种
 data["BIL_CC3DS"]    = "1"; //是否开启3ds 1 开启 0 不开启
+data["BIL_GOODSNAME"] = "#gold#Runescape/OSRS Old School/ 10M Gold"; //商品名称必填 而且必须是正确的否则无法结算
 data["URL_SUCCESS" ]  = "http://hs.crjblog.cn/success.php";//支付成功跳转页面
 data["URL_FAILED"]   = "http://hs.crjblog.cn/failed.php"; //支付失败跳转页面
 data["URL_NOTIFY"]   = "http://hs.crjblog.cn/notify.php"; //异步回调跳转页面
 
 var card = new NameValueCollection();
-card["BIL_CCNUMBER"] = "4907639999990022"; //信用卡卡号
-card["BIL_CCHOLDER"] = "zuochengdong"; //信用卡持卡人姓名
+card["BIL_CCNUMBER"] = "5200000000000106"; //信用卡卡号
+card["BIL_CCHOLDER"] = "john smith"; //信用卡持卡人姓名
 card["BIL_CCEXPM"] = "041"; //信用卡过期月份
 card["BIL_CCEXPY"] = "2022"; //信用卡过期年份
-card["BIL_CCCVV2"] = "543"; //信用卡CVV2码
+card["BIL_CCCVV2"] = "123"; //信用卡CVV2码
 card["BIL_IPADDR"] = "58.247.45.36"; //付款人IP
-card["BIL_GOODSNAME"] = "iphone xs "; //商品名称或描述
+card['BIL_GOODS_URL'] = 'https://www.merchant.com/goods/30'; //买家购买商户的链接
 
 //更多支付参数请参考文档 经典模式->附录2：付款请求参数表
 //签名

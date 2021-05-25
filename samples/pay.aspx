@@ -49,15 +49,16 @@ String invoicetemp = utctemp.Year + (utctemp.Month < 10 ? "0" + utctemp.Month.To
 
 //支付参数
 var data = new NameValueCollection();
-data["REQ_SANDBOX"]  = "0"; //TODO 是否开启测试模式 注意秘钥是否对应
+data["REQ_SANDBOX"]  = "1"; //TODO 是否开启测试模式 注意秘钥是否对应
 data["REQ_EMAIL"] = "rongjiang.chen@witsion.com"; //TODO 需要换成自己的 商户邮箱 商户后台申请的邮箱
 data["REQ_TIMES"]    = untime; //请求时间
 data["REQ_INVOICE"] = "TEST" + invoicetemp + rand.Next(1000, 9999); //订单号
 data["BIL_METHOD"]   = "L01"; //请求方式
 data["CUS_EMAIL"]    = "rongjiang.chen@witsion.com"; //客户邮箱
-data["BIL_PRICE"]    = "0.1"; //价格
+data["BIL_PRICE"]    = "1"; //价格
 data["BIL_CURRENCY"] = "USD"; //币种
-data["BIL_CC3DS"]    = "0"; //是否开启3ds 1 开启 0 不开启
+data["BIL_CC3DS"]    = "1"; //是否开启3ds 1 开启 0 不开启
+data["BIL_GOODSNAME"] = "#gold#Runescape/OSRS Old School/ 10M Gold"; //TODO 商品名称必填 而且必须是正确的否则无法结算
 data["URL_SUCCESS" ]  = "http://hs.crjblog.cn/success.php";//支付成功跳转页面
 data["URL_FAILED"]   = "http://hs.crjblog.cn/failed.php"; //支付失败跳转页面
 data["URL_NOTIFY"]   = "http://hs.crjblog.cn/notify.php"; //异步回调跳转页面
